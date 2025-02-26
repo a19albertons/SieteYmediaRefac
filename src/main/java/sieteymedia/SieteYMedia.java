@@ -38,25 +38,7 @@ public class SieteYMedia {
             return false;
         }
     }
-    void turnoJugador(){
-        char opc = 'C';
-        while (valorCartas(cartasJugador) < 7.5 && opc == 'C') {
-            Carta c = baraja.darCartas(1)[0];
-            // insertamos c en las cartas del jugador
-            insertarCartaEnArray(cartasJugador, c);
-            // mostramos cartas y su valor, si se pasa se sale del bucle
-            System.out.println("Éstas son tus cartas jugador:");
-//            mostrarCartas(cartasJugador);
-            double valor = valorCartas(cartasJugador);
-            System.out.println("\n\tValor de cartas: " + valor);
-            if (valor < 7.5) {
-                // suponemos que el usuario teclea bien !!!
-                System.out.println("\n¿Pides [C]arta o te [P]lantas?");
-//                opc = sc.next().trim().toUpperCase().charAt(0);
-            }
 
-        }
-    }
 //    funciones de logica del juego que deberían estar bien
 double valorCartas(Carta[] cartas) {
     double total = 0.0;
