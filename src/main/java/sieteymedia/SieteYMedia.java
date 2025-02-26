@@ -8,8 +8,7 @@ public class SieteYMedia {
     Carta[] cartasJugador;
     Carta[] cartasBanca;
     
-
-    public void GameControler() {
+    SieteYMedia(){
         baraja = new Baraja();
         baraja.barajar();
         // se van pidiendo cartas al jugar pero matemáticamente a partir de 15 siempre

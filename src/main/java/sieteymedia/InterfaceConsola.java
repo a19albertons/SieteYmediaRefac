@@ -10,7 +10,6 @@ public class InterfaceConsola {
     InterfaceConsola() {
         this.presentarJuego();
         SieteYMedia juego=new SieteYMedia();
-        juego.GameControler();
         System.out.println("Como mínimo recibes una carta, luego puedes decidir si seguir o plantarte");
         char opc='C';
         while (juego.valorCartasJugador() < 7.5 && opc == 'C') {
