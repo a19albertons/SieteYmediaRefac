@@ -14,7 +14,7 @@ public class InterfaceConsola {
         System.out.println("Como mínimo recibes una carta, luego puedes decidir si seguir o plantarte");
         char opc='C';
         while (juego.valorCartasJugador() < 7.5 && opc == 'C') {
-            juego.añadirCartaJugador();
+            juego.anadirCartaJugador();
             System.out.println("Éstas son tus cartas jugador:");
             Carta[] cartasJugador = juego.mostrarJugador();
             int i = 0;
@@ -24,11 +24,32 @@ public class InterfaceConsola {
             }
             double valor = juego.valorCartasJugador();
             System.out.println("\n\tValor de cartas: "+valor);
-            if (juego.jugadorDentroLimites(valor)){
+            if (juego.DentroLimites(valor)){
                 System.out.println("\n¿Pides [C]arta o te [P]lantas?");
                 opc = sc.next().trim().toUpperCase().charAt(0);
             }
         }
+        if (!juego.DentroLimites(juego.valorCartasJugador())){
+            System.out.println("Jugador, te has pasado en tu jugada anterior, gana la banca");
+            System.out.println("Adios");
+            return;
+        }
+        System.out.println("\n\nTurno de banca ...");
+        juego.anadirCartasBanca();
+        System.out.println("Éstas son mis cartas:");
+        Carta[] cartasBanca = juego.mostrarBanca();
+        int i = 0;
+        while (cartasBanca[i] != null) {
+            System.out.print("\t" + cartasBanca[i]);
+            i++;
+        }
+        System.out.println("\n\tValor de  mis cartas(banca): " + juego.valorCartasBanca());
+        if (juego.valorCartasBanca() > 7.5) {
+            System.out.println("me pasé, ganas tú,jugador");
+        } else {
+            System.out.println("Gana la banca");
+        }
+
 
     }
     public static void main(String[] args) {

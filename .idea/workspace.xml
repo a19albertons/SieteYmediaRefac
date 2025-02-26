@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c03f2ee1-641a-465c-bfea-44c33d428686" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/sieteymedia/InterfaceConsola.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sieteymedia/SieteYMedia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sieteymedia/InterfaceConsola.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sieteymedia/InterfaceConsola.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sieteymedia/SieteYMedia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sieteymedia/SieteYMedia.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,18 +29,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "a19albertons"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;a19albertons&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/a19albertons/SieteYmediaRefac",
-    "accountId": "cab69c82-9a7b-4880-a11a-6e98249ca151"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/a19albertons/SieteYmediaRefac&quot;,
+    &quot;accountId&quot;: &quot;cab69c82-9a7b-4880-a11a-6e98249ca151&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -53,6 +52,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.SieteYmediaRefac [:InterfaceConsola.main()].executor": "Run",
     "Gradle.SieteYmediaRefac [:sieteymedia.InterfaceConsola.main()].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",

@@ -19,7 +19,7 @@ public class SieteYMedia {
         cartasJugador = new Carta[15];
         cartasBanca = new Carta[15];
     }
-    void añadirCartaJugador() {
+    void anadirCartaJugador() {
         Carta c = baraja.darCartas(1)[0];
         // insertamos c en las cartas del jugador
         insertarCartaEnArray(cartasJugador, c);
@@ -30,13 +30,26 @@ public class SieteYMedia {
     double valorCartasJugador(){
         return valorCartas(cartasJugador);
     }
-    boolean jugadorDentroLimites(double valor){
+    boolean DentroLimites(double valor){
         if (valor < 7.5) {
             return true;
         }
         else {
             return false;
         }
+    }
+    void anadirCartasBanca(){
+        double valorCartasJugador = valorCartas(cartasJugador);
+        while (valorCartas(cartasBanca) < valorCartasJugador) {
+            Carta c = baraja.darCartas(1)[0];
+            insertarCartaEnArray(cartasBanca, c);
+        }
+    }
+    Carta[] mostrarBanca(){
+        return cartasBanca;
+    }
+    double valorCartasBanca(){
+        return valorCartas(cartasBanca);
     }
 
 //    funciones de logica del juego que deberían estar bien
