@@ -12,7 +12,7 @@ public class InterfaceConsola {
         SieteYMedia juego=new SieteYMedia();
         System.out.println("Como mínimo recibes una carta, luego puedes decidir si seguir o plantarte");
         char opc='C';
-        while (juego.valorCartasJugador() < 7.5 && opc == 'C') {
+        while (juego.DentroLimites(juego.valorCartasJugador()) && opc == 'C') {
             juego.anadirCartaJugador();
             System.out.println("Éstas son tus cartas jugador:");
             Carta[] cartasJugador = juego.mostrarJugador();
@@ -43,7 +43,7 @@ public class InterfaceConsola {
             i++;
         }
         System.out.println("\n\tValor de  mis cartas(banca): " + juego.valorCartasBanca());
-        if (juego.valorCartasBanca() > 7.5) {
+        if (!juego.DentroLimites(juego.valorCartasBanca())) {
             System.out.println("me pasé, ganas tú,jugador");
         } else {
             System.out.println("Gana la banca");
