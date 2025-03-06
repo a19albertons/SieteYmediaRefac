@@ -82,7 +82,4 @@ public class InterfaceConsola {
         }
         System.out.println("\n\tValor de  mis cartas(banca): " + juego.valorCartasBanca());
     }
-    void controlBanca(SieteYMedia juego) {
-
-    }
 }
