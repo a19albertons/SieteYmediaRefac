@@ -10,39 +10,15 @@ public class InterfaceConsola {
     InterfaceConsola() {
         this.presentarJuego();
         SieteYMedia juego=new SieteYMedia();
-        System.out.println("Como mínimo recibes una carta, luego puedes decidir si seguir o plantarte");
-        char opc='C';
-        while (juego.DentroLimites(juego.valorCartasJugador()) && opc == 'C') {
-            juego.anadirCartaJugador();
-            System.out.println("Éstas son tus cartas jugador:");
-            Carta[] cartasJugador = juego.mostrarJugador();
-            int i = 0;
-            while (cartasJugador[i] != null) {
-                System.out.print("\t" + cartasJugador[i]);
-                i++;
-            }
-            double valor = juego.valorCartasJugador();
-            System.out.println("\n\tValor de cartas: "+valor);
-            if (juego.DentroLimites(valor)){
-                System.out.println("\n¿Pides [C]arta o te [P]lantas?");
-                opc = sc.next().trim().toUpperCase().charAt(0);
-            }
-        }
+        turnoJugador(juego);
+        // Control turno jugador
         if (!juego.DentroLimites(juego.valorCartasJugador())){
             System.out.println("Jugador, te has pasado en tu jugada anterior, gana la banca");
             System.out.println("Adios");
             return;
         }
-        System.out.println("\n\nTurno de banca ...");
-        juego.anadirCartasBanca();
-        System.out.println("Éstas son mis cartas:");
-        Carta[] cartasBanca = juego.mostrarBanca();
-        int i = 0;
-        while (cartasBanca[i] != null) {
-            System.out.print("\t" + cartasBanca[i]);
-            i++;
-        }
-        System.out.println("\n\tValor de  mis cartas(banca): " + juego.valorCartasBanca());
+        turnoBanca(juego);
+        // Control turno banca
         if (!juego.DentroLimites(juego.valorCartasBanca())) {
             System.out.println("me pasé, ganas tú,jugador");
         } else {
@@ -73,5 +49,40 @@ public class InterfaceConsola {
         System.out.println(
                 "- En este proceso puede ocurrir que la banca 'se pase' y entonces pierde la banca y gana el jugador.");
         System.out.println("\nEmpecemos!!!\n");
+    }
+    void turnoJugador(SieteYMedia juego){
+        System.out.println("Como mínimo recibes una carta, luego puedes decidir si seguir o plantarte");
+        char opc='C';
+        while (juego.DentroLimites(juego.valorCartasJugador()) && opc == 'C') {
+            juego.anadirCartaJugador();
+            System.out.println("Éstas son tus cartas jugador:");
+            Carta[] cartasJugador = juego.mostrarJugador();
+            int i = 0;
+            while (cartasJugador[i] != null) {
+                System.out.print("\t" + cartasJugador[i]);
+                i++;
+            }
+            double valor = juego.valorCartasJugador();
+            System.out.println("\n\tValor de cartas: "+valor);
+            if (juego.DentroLimites(valor)){
+                System.out.println("\n¿Pides [C]arta o te [P]lantas?");
+                opc = sc.next().trim().toUpperCase().charAt(0);
+            }
+        }
+    }
+    void turnoBanca(SieteYMedia juego) {
+        System.out.println("\n\nTurno de banca ...");
+        juego.anadirCartasBanca();
+        System.out.println("Éstas son mis cartas:");
+        Carta[] cartasBanca = juego.mostrarBanca();
+        int i = 0;
+        while (cartasBanca[i] != null) {
+            System.out.print("\t" + cartasBanca[i]);
+            i++;
+        }
+        System.out.println("\n\tValor de  mis cartas(banca): " + juego.valorCartasBanca());
+    }
+    void controlBanca(SieteYMedia juego) {
+
     }
 }
